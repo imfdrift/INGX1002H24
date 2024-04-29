@@ -181,7 +181,7 @@ class NumDiffDemo:
             self.points.set_ydata(y_trace1+y_trace2)
             self.set_secant(x-self.h, x+self.h)        
             self.update_ticks([x-self.h, x, x+self.h],["x - h","x","x + h"])
-            self.ax1.set_title("Foroverdifferanse:\n"+r"$\frac{f(x+h)-f(x-h)}{2\cdot h} = \frac{f(%.2f+%.2f)-f(%.2f-%.2f)}{2\cdot %.2f} = %.2f$"%(x, self.h, x, self.h, self.h, (self.f(x+self.h)-self.f(x-self.h))/self.h/2))
+            self.ax1.set_title("Senterdifferanse:\n"+r"$\frac{f(x+h)-f(x-h)}{2\cdot h} = \frac{f(%.2f+%.2f)-f(%.2f-%.2f)}{2\cdot %.2f} = %.2f$"%(x, self.h, x, self.h, self.h, (self.f(x+self.h)-self.f(x-self.h))/self.h/2))
 
         self.ax1.set_xlim([self.x_vals[0], self.x_vals[-1]])
         self.ax1.set_ylim([self.y_range[0], self.y_range[-1]])
